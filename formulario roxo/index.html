@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulário</title>
+    <style>
+        body {
+            margin: 0;
+            background: #dddddd;
+            color: white;
+        }
+        .navbar {
+            height: 10vh;
+            padding: 0px;
+            background-color: rgb(90,44,130);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            background: black;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+        a:hover {
+            color: #9129e4;
+        }
+        main {
+            margin: 5% auto;
+            width: 110vh;
+            height: 100px;
+            color: black;
+        }
+        section {
+            padding: 2%;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header-form {
+            margin: 0;
+            padding: 0px;
+            text-align: center;
+            background-color: #9129e4;
+            color: white;
+        }
+        header, footer {
+            padding: 10px;
+            background-color: rgb(90,44,130);
+        }
+        footer {
+            position: fixed;
+            width: 100%;
+            height: 5vh;
+            bottom: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        label {
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            margin-bottom: -10;
+            width: 95%;
+            padding: 10px;
+            padding-left: 0;
+        }
+        .pesquisa-container {
+            margin: -3%;
+            width: 30%;
+        }
+        #pesquisa {
+            border: none;
+            border-radius: 10px;
+            width: 70%;
+        }
+        button[type="submit"] {
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .botoes {
+            margin-top: 10px;
+            display: flex;
+            justify-content: right;
+        }
+        button {
+            margin-left: 10px;
+            padding: 5px;
+            background: rgb(145,41,228);
+            border: none;
+            color: white;
+        }
+        select {
+            padding: 10px;
+        }
+        h3 {
+            margin-left: 20px;
+        }
+        h2 {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <h3>ETE - Ministro Fernando Lyra</h3>
+        <div class="pesquisa-container">
+            <input type="search" id="pesquisa" placeholder="O que você está procurando?">
+            <button type="submit">Enviar</button>
+        </div>
+    </header>
+    <nav>
+        <a href="#">Menu</a>
+        <a href="#">Contato</a>
+        <a href="#">Sobre</a>
+        <a href="#">Tabela</a>
+    </nav>
+    <main>
+        <form action="#">
+            <header class="header-form">
+                <h2>Formulário</h2>
+            </header>
+            <section>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" placeholder="Seu nome">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Seu email">
+                <label for="telefone">Telefone celular:</label>
+                <input type="tel" id="telefone" placeholder="Seu telefone celular">
+                <label for="data">Data de nascimento:</label>
+                <input type="date" id="data">
+                <label for="leitura">Campo apenas de leitura:</label>
+                <input type="text" id="leitura" placeholder="Esse input é apenas de leitura">
+                <label for="estado">Estado:</label>
+                <select id="estado">
+                    <optgroup label="norte">
+                        <option value="amazonas">Amazonas</option>
+                    </optgroup>
+                    <optgroup label="nordeste">
+                        <option value="Pernambuco">Pernambuco</option>
+                    </optgroup>
+                    <optgroup label="sul">
+                        <option value="parana">Paraná</option>
+                    </optgroup>
+                    <optgroup label="sudeste">
+                        <option value="minasGerais">Minas Gerais</option>
+                    </optgroup>
+                    <optgroup label="centroeste">
+                        <option value="matogrosso">Mato Grosso</option>
+                    </optgroup>
+                </select>
+            </section>
+            <div class="botoes">
+                <button>Enviar</button>
+                <button>Limpar</button>
+                <button id="mudarCor">Alterar cor</button>
+                <button>Cor padrão</button>
+            </div>
+        </main>
+        <footer>
+            <h4>Copyrigth © - Desenvolvedor Davi Lopes</h4>
+            </footer>
+        </form>
+        <script>
+            document.getElementById('mudarCor').addEventListener('click', () => {
+                document.getElementById('mudarCor').style.backgroundColor = '#000';
+            });
+        </script>
+</body>
+</html>

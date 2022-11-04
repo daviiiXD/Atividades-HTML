@@ -1,0 +1,6 @@
+:root {
+    --gradiente(lpurple blue)
+}
+.cabecalho {
+    background: var(--gradiente); 
+}
